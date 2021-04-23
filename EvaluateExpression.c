@@ -11,7 +11,7 @@ OperandType EvaluateExpression(){
         case '<': //栈顶元素优先权低,c压入栈
                 Push(OPTR,c);c=getchar();
                 break;
-        case '=': //脱括号并接收下一字符
+        case '=': //脱括号并接收下一字符，'='只出现在<(,)>&<#,#>
           Pop(OPTR,x);c=getchar();
           break;
         case '>': //退栈并将运算结果入栈
