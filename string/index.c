@@ -10,3 +10,19 @@ int Index(SString S,SString T){
     }
     if(j>T.length)return i-T.length;
     else return 0;                                                                                                                
+  }
+}
+
+int search(String pat, String txt){
+  int M=pat.length;
+  int N=txt.length;
+  for(int i=0; i<=N-M;i++){
+    int j;
+    for(j=0;j<M;j++){
+      if(pat[j]!=txt[i+j])
+        break;
+    }
+    if(j==M) return i;
+  }
+  return -1;
+}
